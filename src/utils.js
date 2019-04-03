@@ -7,7 +7,7 @@ function filterObject(source, keys) {
   const newObject = {};
 
   keys.forEach((obj) => {
-    newObject[obj] = source[obj];
+    if(source[obj] !== undefined) newObject[obj] = source[obj];
   });
 
   return newObject;
